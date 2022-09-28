@@ -4,12 +4,16 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.*;
+
+import java.time.Duration;
 
 
 public class RequestTest {
@@ -34,6 +38,7 @@ public class RequestTest {
     public void setup (){
         System.setProperty("webdriver.chrome.driver","chromedriver.exe");
         driver = new  ChromeDriver ();
+        driverWait = new WebDriverWait(driver, Duration.ofSeconds(10));
         loginPage = new LoginPage(driver,driverWait);
         inventoryPage = new InventoryPage (driver,driverWait);
         cartPage = new CartPage(driver,driverWait);
@@ -119,7 +124,7 @@ public class RequestTest {
         WebElement burgerBtn = driver.findElement(By.id("react-burger-menu-btn"));
         burgerBtn.click();
         WebElement logOutBtn = driver.findElement(By.id("logout_sidebar_link"));
-        Thread.sleep(1000);
+        driverWait.until(ExpectedConditions.visibilityOfElementLocated(By.id("logout_sidebar_link")));
         logOutBtn.click();
         driver.get("https://www.saucedemo.com/cart.html");
         WebElement errorMsg = driver.findElement(By.xpath("//*[@id=\"login_button_container\"]/div/form/div[3]/h3"));

@@ -4,21 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="311e1eda-314c-4167-8e56-c79b7f9c91d0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/CartPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/CheckOutFinalPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/CheckOutFirstPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/CheckOutSecondPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/InventoryPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/RequestTest.java" afterDir="false" />
+    <list default="true" id="311e1eda-314c-4167-8e56-c79b7f9c91d0" name="Changes" comment="second commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/RequestTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/RequestTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +39,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.RequestTest">
+  <component name="RunManager" selected="TestNG.RequestTest.logOutTest">
     <configuration name="RequestTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SauceDemoTestHomework" />
       <extension name="coverage">
@@ -143,8 +131,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.RequestTest" />
         <item itemvalue="TestNG.RequestTest.logOutTest" />
+        <item itemvalue="TestNG.RequestTest" />
         <item itemvalue="TestNG.RequestTest.testTotalAmount" />
         <item itemvalue="TestNG.RequestTest.testCheckOut" />
         <item itemvalue="TestNG.RequestTest.testAddedItemToCart" />
@@ -160,6 +148,14 @@
       <option name="presentableId" value="Default" />
       <updated>1664378589667</updated>
     </task>
+    <task id="LOCAL-00001" summary="second commit">
+      <created>1664402772031</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1664402772031</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -172,5 +168,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="second commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="second commit" />
   </component>
 </project>
