@@ -15,15 +15,15 @@ public class CartPage extends BasePage {
         super(driver, driverWait);
     }
 
-    public WebElement getAddedItemName (){
+    public WebElement getAddedItemName() {
         return getDriver().findElement(addedItemName);
     }
 
-    public WebElement getCheckoutButton (){
+    public WebElement getCheckoutButton() {
         return getDriver().findElement(checkoutButton);
     }
 
-    public void checkout (){
+    public void checkout() {
         getCheckoutButton().click();
     }
 }

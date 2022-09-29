@@ -4,7 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -33,69 +32,63 @@ public class RequestTest {
     private WebDriverWait driverWait;
 
 
-
     @BeforeClass
-    public void setup (){
-        System.setProperty("webdriver.chrome.driver","chromedriver.exe");
-        driver = new  ChromeDriver ();
+    public void setup() {
+        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+        driver = new ChromeDriver();
         driverWait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        loginPage = new LoginPage(driver,driverWait);
-        inventoryPage = new InventoryPage (driver,driverWait);
-        cartPage = new CartPage(driver,driverWait);
-        checkOutFirstPage = new CheckOutFirstPage(driver,driverWait);
-        checkOutSecondPage = new CheckOutSecondPage(driver,driverWait);
-        checkOutFinalPage = new CheckOutFinalPage(driver,driverWait);
+        loginPage = new LoginPage(driver, driverWait);
+        inventoryPage = new InventoryPage(driver, driverWait);
+        cartPage = new CartPage(driver, driverWait);
+        checkOutFirstPage = new CheckOutFirstPage(driver, driverWait);
+        checkOutSecondPage = new CheckOutSecondPage(driver, driverWait);
+        checkOutFinalPage = new CheckOutFinalPage(driver, driverWait);
 
     }
 
     @BeforeMethod
-    public void beforeMethod (){
+    public void beforeMethod() {
         driver.manage().deleteAllCookies();
         driver.get("https://www.saucedemo.com");
     }
 
 
-
     @Test
-
-    public void testLogin (){
-        loginPage.login("standard_user","secret_sauce");
+    public void testLogin() {
+        loginPage.login("standard_user", "secret_sauce");
         String expectedResult = "PRODUCTS";
         WebElement productsInventoryText = driver.findElement(By.xpath("//*[@id=\"header_container\"]/div[2]/span"));
         productsInventoryText.getText();
         String actualResult = productsInventoryText.getText();
-        Assert.assertEquals(actualResult,expectedResult);
+        Assert.assertEquals(actualResult, expectedResult);
 
     }
 
 
     @Test
-
-    public void testAddToCartBadgeDisplay (){
-        loginPage.login("standard_user","secret_sauce");
+    public void testAddToCartBadgeDisplay() {
+        loginPage.login("standard_user", "secret_sauce");
         inventoryPage.addToCart();
         Assert.assertTrue(inventoryPage.getShoppingCartInfoBadge().isDisplayed());
 
     }
 
     @Test
-
-    public void testAddedItemToCart (){
+    public void testAddedItemToCart() {
         String expectedResult = "Sauce Labs Backpack";
-        loginPage.login("standard_user","secret_sauce");
+        loginPage.login("standard_user", "secret_sauce");
         inventoryPage.removeItemFromCart();
         inventoryPage.addToCart();
         inventoryPage.checkCart();
         String actualResult = cartPage.getAddedItemName().getText();
-        Assert.assertEquals(actualResult,expectedResult);
+        Assert.assertEquals(actualResult, expectedResult);
 
     }
 
     @Test
-
-    public void testTotalAmount () {
+    public void testTotalAmount() {
         String expectedResult = "32.39";
-        loginPage.login("standard_user","secret_sauce");
+        loginPage.login("standard_user", "secret_sauce");
         inventoryPage.addToCart();
         inventoryPage.checkCart();
         cartPage.checkout();
@@ -106,9 +99,8 @@ public class RequestTest {
     }
 
     @Test
-
-    public void testCheckOutConfirmationMessage (){
-        loginPage.login("standard_user","secret_sauce");
+    public void testCheckOutConfirmationMessage() {
+        loginPage.login("standard_user", "secret_sauce");
         inventoryPage.checkCart();
         cartPage.checkout();
         checkOutFirstPage.checkout();
@@ -118,9 +110,8 @@ public class RequestTest {
     }
 
     @Test
-
-    public void logOutTest () throws InterruptedException{
-        loginPage.login("standard_user","secret_sauce");
+    public void logOutTest() throws InterruptedException {
+        loginPage.login("standard_user", "secret_sauce");
         WebElement burgerBtn = driver.findElement(By.id("react-burger-menu-btn"));
         burgerBtn.click();
         WebElement logOutBtn = driver.findElement(By.id("logout_sidebar_link"));
@@ -131,8 +122,5 @@ public class RequestTest {
         Assert.assertTrue(errorMsg.isDisplayed());
 
 
-
     }
-
-
 }

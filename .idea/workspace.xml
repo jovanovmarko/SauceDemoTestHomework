@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="311e1eda-314c-4167-8e56-c79b7f9c91d0" name="Changes" comment="second commit">
+    <list default="true" id="311e1eda-314c-4167-8e56-c79b7f9c91d0" name="Changes" comment="third commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/CartPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/CheckOutFirstPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/CheckOutFirstPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/CheckOutSecondPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/CheckOutSecondPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/InventoryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/InventoryPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/RequestTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/RequestTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,14 +36,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="TestNG.RequestTest.logOutTest">
+}</component>
+  <component name="RunManager" selected="TestNG.RequestTest">
     <configuration name="RequestTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SauceDemoTestHomework" />
       <extension name="coverage">
@@ -131,8 +135,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.RequestTest.logOutTest" />
         <item itemvalue="TestNG.RequestTest" />
+        <item itemvalue="TestNG.RequestTest.logOutTest" />
         <item itemvalue="TestNG.RequestTest.testTotalAmount" />
         <item itemvalue="TestNG.RequestTest.testCheckOut" />
         <item itemvalue="TestNG.RequestTest.testAddedItemToCart" />
@@ -155,7 +159,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664402772031</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="third commit">
+      <created>1664403439870</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1664403439870</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -171,6 +182,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="second commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="second commit" />
+    <MESSAGE value="third commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="third commit" />
   </component>
 </project>

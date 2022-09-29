@@ -18,23 +18,23 @@ public class CheckOutFirstPage extends BasePage {
     }
 
 
-    public WebElement getFirstName (){
+    public WebElement getFirstName() {
         return getDriver().findElement(firstName);
     }
 
-    public WebElement getLastName (){
+    public WebElement getLastName() {
         return getDriver().findElement(lastName);
     }
 
-    public WebElement getZipCode (){
+    public WebElement getZipCode() {
         return getDriver().findElement(zipCode);
     }
 
-    public WebElement getContinueButton (){
+    public WebElement getContinueButton() {
         return getDriver().findElement(continueBtn);
     }
 
-    public void checkout (){
+    public void checkout() {
         getFirstName().clear();
         getLastName().clear();
         getZipCode().clear();

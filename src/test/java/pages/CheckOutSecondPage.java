@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class CheckOutSecondPage extends BasePage{
+public class CheckOutSecondPage extends BasePage {
 
     private By finishButton = By.id("finish");
 
@@ -15,15 +15,15 @@ public class CheckOutSecondPage extends BasePage{
         super(driver, driverWait);
     }
 
-    public WebElement getFinishButton (){
+    public WebElement getFinishButton() {
         return getDriver().findElement(finishButton);
     }
 
-    public WebElement getTotalAmount (){
+    public WebElement getTotalAmount() {
         return getDriver().findElement(totalAmount);
     }
 
-    public void finishCheckout (){
+    public void finishCheckout() {
         getFinishButton().click();
     }
 
