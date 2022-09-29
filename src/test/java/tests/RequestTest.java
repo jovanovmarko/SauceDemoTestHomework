@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -44,6 +45,11 @@ public class RequestTest {
         checkOutSecondPage = new CheckOutSecondPage(driver, driverWait);
         checkOutFinalPage = new CheckOutFinalPage(driver, driverWait);
 
+    }
+
+    @AfterClass
+    public void quit() {
+        driver.quit();
     }
 
     @BeforeMethod
