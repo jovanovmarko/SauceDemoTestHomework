@@ -110,7 +110,7 @@ public class RequestTest {
     }
 
     @Test
-    public void logOutTest() throws InterruptedException {
+    public void logOutTest() {
         loginPage.login("standard_user", "secret_sauce");
         WebElement burgerBtn = driver.findElement(By.id("react-burger-menu-btn"));
         burgerBtn.click();
